@@ -1,0 +1,64 @@
+[build-system]
+requires = ["flit_core >=3.11,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "base64hub"
+version = "1.0.0"
+description = "Base64 encode, decode and validate in Python and the shell: lenient decoding, URL-safe, no padding, MIME wrap, data URIs. b64 CLI, zero dependencies."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "base64hub", email = "g@base64hub.com" }]
+maintainers = [{ name = "base64hub", email = "g@base64hub.com" }]
+keywords = [
+    "base64",
+    "base64url",
+    "encode",
+    "decode",
+    "validate",
+    "data-uri",
+    "rfc4648",
+    "mime",
+    "cli",
+    "b64",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Utilities",
+    "Topic :: Text Processing",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://base64hub.com/pypi/"
+Documentation = "https://base64hub.com/docs/python/"
+Source = "https://github.com/base64hub-com/base64hub-python"
+Issues = "https://github.com/base64hub-com/base64hub-python/issues"
+
+[project.scripts]
+b64 = "base64hub.cli:main"
+base64hub = "base64hub.cli:main"
+
+[tool.flit.module]
+name = "base64hub"
+
+[tool.flit.sdist]
+include = ["tests/", "testdata/"]
+exclude = ["PUBLISH.md", ".gitignore"]

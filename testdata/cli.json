@@ -1,0 +1,580 @@
+{
+ "version": "1.0.0",
+ "cases": [
+  {
+   "args": [
+    "Hello, hub!"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "5347567362473873494768315969453d0a",
+   "stderr": "",
+   "exit": 0
+  },
+  {
+   "args": [
+    "-d",
+    "SGVsbG8sIGh1YiE="
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "48656c6c6f2c2068756221",
+   "stderr": "",
+   "exit": 0
+  },
+  {
+   "args": [
+    "--url"
+   ],
+   "stdin_hex": "fbffbf",
+   "stdout_hex": "2d5f2d5f0a",
+   "stderr": "",
+   "exit": 0
+  },
+  {
+   "args": [
+    "--url",
+    "--no-pad",
+    "Привет"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "304a5f52674e4334304c4c51746447430a",
+   "stderr": "",
+   "exit": 0
+  },
+  {
+   "args": [],
+   "stdin_hex": "",
+   "stdout_hex": "0a",
+   "stderr": "",
+   "exit": 0
+  },
+  {
+   "args": [],
+   "stdin_hex": "666f6f626172",
+   "stdout_hex": "5a6d3976596d46790a",
+   "stderr": "",
+   "exit": 0
+  },
+  {
+   "args": [
+    "-w",
+    "4",
+    "foobar"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "5a6d39760a596d46790a",
+   "stderr": "",
+   "exit": 0
+  },
+  {
+   "args": [
+    "--wrap=4",
+    "foobar"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "5a6d39760a596d46790a",
+   "stderr": "",
+   "exit": 0
+  },
+  {
+   "args": [
+    "foobar",
+    "-w",
+    "4"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "5a6d39760a596d46790a",
+   "stderr": "",
+   "exit": 0
+  },
+  {
+   "args": [
+    "--wrap",
+    "0",
+    "foobar"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "5a6d3976596d46790a",
+   "stderr": "",
+   "exit": 0
+  },
+  {
+   "args": [
+    "-n",
+    "f"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "5a670a",
+   "stderr": "",
+   "exit": 0
+  },
+  {
+   "args": [
+    "--data-uri",
+    "Hello"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "646174613a746578742f706c61696e3b636861727365743d7574662d383b6261736536342c534756736247383d0a",
+   "stderr": "",
+   "exit": 0
+  },
+  {
+   "args": [
+    "--data-uri",
+    "-m",
+    "text/csv",
+    "a,b"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "646174613a746578742f6373763b6261736536342c595378690a",
+   "stderr": "",
+   "exit": 0
+  },
+  {
+   "args": [
+    "--data-uri"
+   ],
+   "stdin_hex": "89504e470d0a1a0a0000000d49484452",
+   "stdout_hex": "646174613a696d6167652f706e673b6261736536342c6956424f5277304b47676f414141414e5355684555673d3d0a",
+   "stderr": "",
+   "exit": 0
+  },
+  {
+   "args": [
+    "--data-uri"
+   ],
+   "stdin_hex": "000102",
+   "stdout_hex": "646174613a6170706c69636174696f6e2f6f637465742d73747265616d3b6261736536342c414145430a",
+   "stderr": "",
+   "exit": 0
+  },
+  {
+   "args": [
+    "--data-uri",
+    "<svg xmlns='http://www.w3.org/2000/svg'/>"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "646174613a696d6167652f7376672b786d6c3b6261736536342c50484e325a79423462577875637a306e6148523063446f764c336433647935334d793576636d63764d6a41774d43397a646d636e4c7a343d0a",
+   "stderr": "",
+   "exit": 0
+  },
+  {
+   "args": [
+    "--validate",
+    "SGVsbG8sIGh1YiE="
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "76616c696420286569746865722c203131206279746573290a",
+   "stderr": "",
+   "exit": 0
+  },
+  {
+   "args": [
+    "--validate",
+    "--",
+    "-_-_"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "76616c6964202875726c2c2033206279746573290a",
+   "stderr": "",
+   "exit": 0
+  },
+  {
+   "args": [
+    "--validate",
+    "a+b_"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "76616c696420286d697865642c2033206279746573290a",
+   "stderr": "",
+   "exit": 0
+  },
+  {
+   "args": [
+    "--validate",
+    "Zg"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "76616c696420286569746865722c2031206279746573290a",
+   "stderr": "",
+   "exit": 0
+  },
+  {
+   "args": [
+    "--validate",
+    ""
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "76616c696420286569746865722c2030206279746573290a",
+   "stderr": "",
+   "exit": 0
+  },
+  {
+   "args": [
+    "--validate",
+    "Zm9vY"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "",
+   "stderr": "invalid: invalid length: 5 characters leave a single character in the last group\n",
+   "exit": 1
+  },
+  {
+   "args": [
+    "--validate",
+    "Zm9v!"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "",
+   "stderr": "invalid: invalid character '!' at position 4\n",
+   "exit": 1
+  },
+  {
+   "args": [
+    "--validate"
+   ],
+   "stdin_hex": "5a6d39760a596d46790a",
+   "stdout_hex": "76616c696420286569746865722c2036206279746573290a",
+   "stderr": "",
+   "exit": 0
+  },
+  {
+   "args": [
+    "-d",
+    "--",
+    "-_-_"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "fbffbf",
+   "stderr": "",
+   "exit": 0
+  },
+  {
+   "args": [
+    "-d"
+   ],
+   "stdin_hex": "5a6d39760a596d46790a",
+   "stdout_hex": "666f6f626172",
+   "stderr": "",
+   "exit": 0
+  },
+  {
+   "args": [
+    "-d"
+   ],
+   "stdin_hex": "20205a6d397609596d46790d0a",
+   "stdout_hex": "666f6f626172",
+   "stderr": "",
+   "exit": 0
+  },
+  {
+   "args": [
+    "-d",
+    "data:text/plain;base64,SGk="
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "4869",
+   "stderr": "",
+   "exit": 0
+  },
+  {
+   "args": [
+    "-d",
+    ""
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "",
+   "stderr": "",
+   "exit": 0
+  },
+  {
+   "args": [
+    "-d",
+    "Zg="
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "66",
+   "stderr": "",
+   "exit": 0
+  },
+  {
+   "args": [
+    "-d",
+    "Zm9v!"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "",
+   "stderr": "b64: invalid character '!' at position 4\n",
+   "exit": 1
+  },
+  {
+   "args": [
+    "-d",
+    "Zm=9v"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "",
+   "stderr": "b64: unexpected '=' at position 2: padding is only allowed at the end\n",
+   "exit": 1
+  },
+  {
+   "args": [
+    "-d",
+    "Zg==="
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "",
+   "stderr": "b64: too much padding: 3 '=' at position 2, at most 2 are allowed\n",
+   "exit": 1
+  },
+  {
+   "args": [
+    "-d",
+    "Zm9vY"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "",
+   "stderr": "b64: invalid length: 5 characters leave a single character in the last group\n",
+   "exit": 1
+  },
+  {
+   "args": [
+    "-d",
+    "Zm9v!=YmFy"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "",
+   "stderr": "b64: invalid character '!' at position 4\n",
+   "exit": 1
+  },
+  {
+   "args": [
+    "-d",
+    "-u",
+    "Zm9v"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "",
+   "stderr": "b64: --url only applies to encoding, not to --decode\n",
+   "exit": 2
+  },
+  {
+   "args": [
+    "-d",
+    "-n",
+    "Zm9v"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "",
+   "stderr": "b64: --no-pad only applies to encoding, not to --decode\n",
+   "exit": 2
+  },
+  {
+   "args": [
+    "-d",
+    "-w",
+    "4",
+    "Zm9v"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "",
+   "stderr": "b64: --wrap only applies to encoding, not to --decode\n",
+   "exit": 2
+  },
+  {
+   "args": [
+    "-d",
+    "--data-uri",
+    "Zm9v"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "",
+   "stderr": "b64: --data-uri only applies to encoding, not to --decode\n",
+   "exit": 2
+  },
+  {
+   "args": [
+    "-d",
+    "--validate",
+    "Zm9v"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "",
+   "stderr": "b64: --decode and --validate can't be combined\n",
+   "exit": 2
+  },
+  {
+   "args": [
+    "--validate",
+    "-u",
+    "Zm9v"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "",
+   "stderr": "b64: --url only applies to encoding, not to --validate\n",
+   "exit": 2
+  },
+  {
+   "args": [
+    "-m",
+    "text/plain",
+    "x"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "",
+   "stderr": "b64: --mime needs --data-uri\n",
+   "exit": 2
+  },
+  {
+   "args": [
+    "--data-uri",
+    "-u",
+    "x"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "",
+   "stderr": "b64: --url can't be combined with --data-uri: data URIs use standard padded Base64 on one line\n",
+   "exit": 2
+  },
+  {
+   "args": [
+    "--data-uri",
+    "-n",
+    "x"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "",
+   "stderr": "b64: --no-pad can't be combined with --data-uri: data URIs use standard padded Base64 on one line\n",
+   "exit": 2
+  },
+  {
+   "args": [
+    "--data-uri",
+    "-w",
+    "4",
+    "x"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "",
+   "stderr": "b64: --wrap can't be combined with --data-uri: data URIs use standard padded Base64 on one line\n",
+   "exit": 2
+  },
+  {
+   "args": [
+    "-dn",
+    "x"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "",
+   "stderr": "b64: unknown option -dn (short options can't be combined)\n",
+   "exit": 2
+  },
+  {
+   "args": [
+    "-w76",
+    "x"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "",
+   "stderr": "b64: unknown option -w76 (short options can't be combined)\n",
+   "exit": 2
+  },
+  {
+   "args": [
+    "--bogus"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "",
+   "stderr": "b64: unknown option --bogus\n",
+   "exit": 2
+  },
+  {
+   "args": [
+    "-x"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "",
+   "stderr": "b64: unknown option -x\n",
+   "exit": 2
+  },
+  {
+   "args": [
+    "a",
+    "b"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "",
+   "stderr": "b64: too many arguments: expected one TEXT, got 2 (quote TEXT that contains spaces)\n",
+   "exit": 2
+  },
+  {
+   "args": [
+    "-w",
+    "-3",
+    "x"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "",
+   "stderr": "b64: option -w needs a whole number of 0 or more, got \"-3\"\n",
+   "exit": 2
+  },
+  {
+   "args": [
+    "-w",
+    "abc",
+    "x"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "",
+   "stderr": "b64: option -w needs a whole number of 0 or more, got \"abc\"\n",
+   "exit": 2
+  },
+  {
+   "args": [
+    "-w"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "",
+   "stderr": "b64: option -w needs a value\n",
+   "exit": 2
+  },
+  {
+   "args": [
+    "--decode=1",
+    "x"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "",
+   "stderr": "b64: option --decode takes no value\n",
+   "exit": 2
+  },
+  {
+   "args": [
+    "-i",
+    "missing.txt",
+    "x"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "",
+   "stderr": "b64: give either TEXT or --input, not both\n",
+   "exit": 2
+  },
+  {
+   "args": [
+    "-v"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "62363420312e302e300a",
+   "stderr": "",
+   "exit": 0
+  },
+  {
+   "args": [
+    "--version"
+   ],
+   "stdin_hex": "",
+   "stdout_hex": "62363420312e302e300a",
+   "stderr": "",
+   "exit": 0
+  }
+ ]
+}
